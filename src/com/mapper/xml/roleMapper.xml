@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.RoleMapper">
+	<resultMap type="com.shiro.Role" id="role">
+		<id property="id" column="id"/>
+		<result property="rolename" column="rolename"/>
+	</resultMap>
+	
+	<select id="findAll" resultType="com.shiro.Role">
+		SELECT * FROM role
+	</select>
+</mapper>
